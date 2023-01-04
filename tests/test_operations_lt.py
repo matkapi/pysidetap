@@ -1,6 +1,7 @@
 """Performs opetrations tests for."""
 
 
+# isort: skip_file
 import pytest
 from pysidetap.libs.operations import op_lt
 

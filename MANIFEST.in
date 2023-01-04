@@ -1,5 +1,6 @@
 graft docs
 graft src
+recursive-include examples *.py
 
 include *.rst
 include LICENSE

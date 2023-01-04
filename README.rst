@@ -24,27 +24,7 @@ Python Simple decision table procesor
 Summary
 -------
 
-Simple Decision Table Processor 
-
-**Note** that this repository reflects the setup I like the most and that covers
-the CI needs for my Python projects, which include:
-
-Motivation
-----------
-
-
-Acknowledgments
----------------
-
-
-
-How to use this repository
---------------------------
-
-The `documentation`_ pages explain how to use this template for your projects
-and the implementation details adopted here. The documentation pages also serve
-to demonstrate how to compile documentation with Sphinx and deploy it online
-with `ReadTheDocs`_.
+Simple Decision Table Processor
 
 Issues and Discussions
 ----------------------
@@ -53,25 +33,10 @@ As usual for any GitHub-based project, raise an `issue`_ if you find any bug or
 want to suggest an improvement, or open a `discussion`_ if you want to discuss
 or chat :wink:
 
-Projects using this skeleton
-----------------------------
-
-Below, a list of the projects using this repository as template or as base for
-their CI implementations:
-
-* `julie-forman-kay-lab/IDPConformerGenerator <https://github.com/julie-forman-kay-lab/IDPConformerGenerator>`_
-* `haddocking/HADDOCK3 <https://github.com/haddocking/haddock3>`_
-* `THGLab/MCSCE <https://github.com/THGLab/MCSCE>`_
-* `matkapi/taurenmd <https://github.com/matkapi/taurenmd>`_
-* `MDAnalysis/mdacli <https://github.com/MDAnalysis/mdacli>`_
-
-If you use this repository as a reference for your works, let me know, so I
-list your work above, as well.
-
 Version
 -------
 
-v0.11.1
+v0.0.1
 
 .. _GitHub Actions: https://github.com/features/actions
 .. _PyPI: https://pypi.org

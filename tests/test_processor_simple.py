@@ -1,6 +1,7 @@
 """Performs general tests."""
 
 
+# isort: skip_file
 from asserts_simple import (
     DTableEQ,
     DTableGT_LTEQ,

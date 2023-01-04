@@ -1,6 +1,7 @@
 """Performs opetrations tests for less or equal then."""
 
 
+# isort: skip_file
 from pysidetap.libs.operations import op_lteq
 import pytest
 

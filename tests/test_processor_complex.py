@@ -1,6 +1,7 @@
 """Performs general tests."""
 
 
+# isort: skip_file
 from asserts_complex import DTableReservoar
 from pysidetap.processor import DTProcessor
 
