@@ -1,10 +1,10 @@
-sampleproject
+pysidetap
 =============
 
 .. testsetup::
 
-    from sampleproject import *
+    from pysidetap import *
 
-.. automodule:: sampleproject
+.. automodule:: pysidetap
     :members:
 

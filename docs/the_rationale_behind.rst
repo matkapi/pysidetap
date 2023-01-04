@@ -15,7 +15,7 @@ This repository complies with the ideas of agile development. Why? Because I
 found the agile strategy to fit best the kind of projects I develop. Is this
 the best strategy for your project? Well, you have to evaluate that.
 
-In the "python-project-skeleton" layout, there is only one production branch,
+In the "pysidetap" layout, there is only one production branch,
 the `main` branch, representing the latest state of the software. This layout
 contrasts with the opposite strategy where the `stable` and the `latest`
 branches are kept separate. For the kind of projects I develop, keeping the

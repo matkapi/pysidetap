@@ -1,13 +1,13 @@
 Libs
 ====
 
-.. automodule:: sampleproject.libs
+.. automodule:: pysidetap.libs
     :members:
     :undoc-members:
 
-Something
----------
+Operations
+----------
 
-.. automodule:: sampleproject.libs.samplemodule
+.. automodule:: pysidetap.libs.operations
     :members:
     :undoc-members:

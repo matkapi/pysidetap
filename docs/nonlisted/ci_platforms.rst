@@ -53,15 +53,15 @@ merged to the ``main`` branch. On the other hand, the ``version bump`` workflow
 triggers only when the PR is accepted.
 
 In this repository you can find two PRs demonstrating: one where `tests pass
-<https://github.com/joaomcteixeira/python-project-skeleton/pull/10>`_ and
+<https://github.com/matkapi/pysidetap/pull/10>`_ and
 another where `tests fail
-<https://github.com/joaomcteixeira/python-project-skeleton/pull/11>`_.
+<https://github.com/matkapi/pysidetap/pull/11>`_.
 
 Version release
 ```````````````
 
 Every time a Pull Request is merged to `main` branch, the `deployment workflow
-<https://github.com/joaomcteixeira/python-project-skeleton/blob/master/.github/workflows/version-bump-and-package.yml>`_
+<https://github.com/matkapi/pysidetap/blob/master/.github/workflows/version-bump-and-package.yml>`_
 triggers. This action bumps the new version number according to the
 merge commit message, creates a new GitHub tag for that commit, and
 publishes in PyPI the new software version.
@@ -83,7 +83,7 @@ In conclusion, every commit to ``main`` without the ``[SKIP]`` tag will be
 followed by a version upgrade, new tag, new commit to ``main`` and consequent
 release to PyPI. You have a visual representation of the commit workflow in the
 `Network plot
-<https://github.com/joaomcteixeira/python-project-skeleton/network>`_.
+<https://github.com/matkapi/pysidetap/network>`_.
 
 **How version numbers are managed?**
 
@@ -128,7 +128,7 @@ Code Quality
 Here, we have both ``Codacy`` and ``Code Climate`` as code quality inspectors.
 There are also others out there, feel free to suggested different ones in the
 `Discussion tab
-<https://github.com/joaomcteixeira/python-project-skeleton/discussions>`_.
+<https://github.com/matkapi/pysidetap/discussions>`_.
 
 Codacy
 ``````
@@ -158,16 +158,16 @@ nicely with :ref:`Badges`.
 
 
 .. _Travis-CI: https://travis-ci.org
-.. _.travis.yml: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.travis.yml
+.. _.travis.yml: https://github.com/matkapi/pysidetap/blob/latest/.travis.yml
 .. _tox: https://tox.readthedocs.io/en/latest/
 .. _Appveyor-CI: https://www.appveyor.com/
-.. _tox.ini: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini
-.. _.appveyor.yml: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.appveyor.yml
-.. _.codacy.yaml: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.codacy.yaml
-.. _.codeclimate.yml: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.codeclimate.yml
+.. _tox.ini: https://github.com/matkapi/pysidetap/blob/latest/tox.ini
+.. _.appveyor.yml: https://github.com/matkapi/pysidetap/blob/latest/.appveyor.yml
+.. _.codacy.yaml: https://github.com/matkapi/pysidetap/blob/latest/.codacy.yaml
+.. _.codeclimate.yml: https://github.com/matkapi/pysidetap/blob/latest/.codeclimate.yml
 .. _Codacy: https://app.codacy.com/
 .. _Code Climate: https://codeclimate.com/
 .. _coverage: https://pypi.org/project/coverage/
-.. _.coveragerc: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.coveragerc
+.. _.coveragerc: https://github.com/matkapi/pysidetap/blob/latest/.coveragerc
 .. _bump2version: https://pypi.org/project/bumpversion/
 .. _versioneer: https://github.com/warner/python-versioneer
