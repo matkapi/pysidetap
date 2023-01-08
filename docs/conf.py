@@ -55,6 +55,7 @@ templates_path = ['.']
 extlinks = {
     'issue': ('https://github.com/matkapi/pysidetap/issues/%s', '#'),  # noqa: E501
     'pr': ('https://github.com/matkapi/pysidetap/pull/%s', 'PR #'),  # noqa: E501
+    'pypi-pysidetap': ('https://pypi.org/project/pysidetap/', '#'),
     }
 
 # codecov io closes connection if host is accessed too repetitively.

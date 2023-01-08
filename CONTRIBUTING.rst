@@ -171,8 +171,7 @@ phase. Therefore, to run the unified test suite, developers just need to execute
     conda install tox -c conda-forge
 
 
-One of the greatest advantages of using ``tox`` together with the :ref:`src
-layout <The src layout>` is that unit test actually perform on the installed
+One of the greatest advantages of using ``tox`` is that unit test actually perform on the installed
 source (our package) inside an isolated deployment environment. In order words,
 tests are performed in an environment simulating a post-installation state
 instead of a pre-deploy/development environment. Under this setup, there is no

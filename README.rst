@@ -21,10 +21,113 @@ Python Simple decision table procesor
     :target: https://pysidetap.readthedocs.io/en/latest/index.html
     :alt: Read the Docs
 
+.. image:: https://badge.fury.io/py/pysidetap.svg
+    :target: https://badge.fury.io/py/pysidetap
+    :alt: PyPi
+
+Install
+-------
+
+pysidetap is available on PyPI `pypi-pysidetap`_ and you can install it using pip:
+
+```sh
+pip install pysidetap
+```
+
 Summary
 -------
 
 Simple Decision Table Processor
+
+https://en.wikipedia.org/wiki/Decision_table
+
+This function find and return field 'return' from Decision Table,
+        when all operands in row by 'fields' are True.
+
+Example:
+--------
+This example show use case off Traffic lights decisions.
+
+https://en.wikipedia.org/wiki/Traffic_light#Meanings_of_signals
+
+Decision Table:
+
++-------+----------+---------+--------+
+| red   | yellow   | green   | return |
++=======+==========+=========+========+
+| ==on  | ==off    | ==off   | stop   |
++-------+----------+---------+--------+
+| ==on  | ==on     | ==off   | ready  |
++-------+----------+---------+--------+
+| ==off | ==off    | ==on    | go     |
++-------+----------+---------+--------+
+| ==off | ==on     | ==off   | break  |
++-------+----------+---------+--------+
+| ==off | ==off    | ==off   | off    |
++-------+----------+---------+--------+
+
+.. code-block:: python
+
+    from pysidetap.processor import DTProcessor
+
+    DTableTL = [
+        {
+            'fields': {
+                'red': {'op':'==', 'value':'on'},
+                'yellow': {'op':'==', 'value':'off'},
+                'green': {'op':'==', 'value':'off'},
+            },
+            # Traffic may not proceed beyond the stop line or 
+            # otherwise enter the intersection
+            'return': {'stop'} 
+        },
+        {
+            'fields': {
+                'red': {'op':'==', 'value':'on'},
+                'yellow': {'op':'==', 'value':'on'},
+                'green': {'op':'==', 'value':'off'},
+            },
+            # The signal is about to change, but the red light rules do apply
+            'return': {'ready'} 
+        },
+        {
+            'fields': {
+                'red': {'op':'==', 'value':'off'},
+                'yellow': {'op':'==', 'value':'off'},
+                'green': {'op':'==', 'value':'on'},
+            },
+            # Traffic may not pass the stop line or enter the intersection 
+            # unless it cannot safely stop when the light shows
+            'return': {'go'} 
+        },
+        {
+            'fields': {
+                'red': {'op':'==', 'value':'off'},
+                'yellow': {'op':'==', 'value':'on'},
+                'green': {'op':'==', 'value':'off'},
+            },
+            # Traffic may proceed unless it would not clear the intersection
+            # before the next change of phase
+            'return': {'break'}
+        },
+        {
+            'fields': {
+                'red': {'op':'==', 'value':'off'},
+                'yellow': {'op':'==', 'value':'off'},
+                'green': {'op':'==', 'value':'off'},
+            },
+            # Traffic lights is off
+            'return': {'off'} 
+        },
+    ]
+
+    p = DTProcessor(DTableTL)
+    for red in ['on','off']:
+        for yellow in ['on','off']:
+            for green in ['on','off']:
+                result = p.process({'red':red, 'yellow':yellow, 'green':green})
+                print(f'red: {red}, yellow: {yellow}, green: {green}, result:{result}')
+
 
 Issues and Discussions
 ----------------------
@@ -40,10 +143,6 @@ v0.0.3
 
 .. _GitHub Actions: https://github.com/features/actions
 .. _PyPI: https://pypi.org
-.. _blog post: https://blog.ionelmc.ro/2014/05/25/python-packaging/
-.. _bump2version: https://github.com/c4urself/bump2version
-.. _cookiecutter-pylibrary: https://github.com/ionelmc/cookiecutter-pylibrary
-.. _cookiecutter: https://cookiecutter.readthedocs.io/en/latest/index.html
 .. _discussion: https://github.com/matkapi/pysidetap/discussions
 .. _documentation: https://pysidetap.readthedocs.io/
 .. _even for scientific software: https://github.com/MolSSI/cookiecutter-cms
@@ -61,3 +160,4 @@ v0.0.3
 .. _tox-gh-actions: https://github.com/ymyzk/tox-gh-actions
 .. _tox: https://tox.readthedocs.io/en/latest/
 .. _ReadTheDocs: https://readthedocs.org/
+.. _pypi-pysidetap: https://pypi.org/project/pysidetap/
