@@ -2,6 +2,9 @@
 Changelog
 =========
 
+v0.0.4 (2023-01-08)
+------------------------------------------------------------
+
 * documentation update
 * added traffic lights example
 
