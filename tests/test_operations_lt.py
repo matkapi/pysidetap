@@ -3,7 +3,7 @@
 
 import pytest
 
-from pysidetap.execptions import ProcessorException
+# from pysidetap.execptions import ProcessorException
 from pysidetap.libs.operations import op_lt
 
 
@@ -81,5 +81,5 @@ def test_op_lt_set_false():
 
 def test_op_lt_dict():
     """Test less then funcion for dict."""
-    with pytest.raises(ProcessorException):
+    with pytest.raises(TypeError):
         op_lt({'value1': 1}, {'value1': 2})

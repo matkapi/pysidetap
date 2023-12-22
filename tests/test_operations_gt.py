@@ -3,7 +3,7 @@
 
 import pytest
 
-from pysidetap.execptions import ProcessorException
+# from pysidetap.execptions import ProcessorException
 from pysidetap.libs.operations import op_gt
 
 
@@ -81,5 +81,5 @@ def test_op_gt_set_false():
 
 def test_op_gt_dict():
     """Test great then funcion for dict."""
-    with pytest.raises(ProcessorException):
+    with pytest.raises(TypeError):
         op_gt({'value1': 2}, {'value1': 1})

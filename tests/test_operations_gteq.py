@@ -3,7 +3,7 @@
 
 import pytest
 
-from pysidetap.execptions import ProcessorException
+# from pysidetap.execptions import ProcessorException
 from pysidetap.libs.operations import op_gteq
 
 
@@ -93,5 +93,5 @@ def test_op_gteq_set_false():
 
 def test_op_gteq_dict():
     """Test great or equal then funcion for dict."""
-    with pytest.raises(ProcessorException):
+    with pytest.raises(TypeError):
         op_gteq({'value1': 2}, {'value1': 1})

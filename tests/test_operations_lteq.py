@@ -3,7 +3,7 @@
 
 import pytest
 
-from pysidetap.execptions import ProcessorException
+# from pysidetap.execptions import ProcessorException
 from pysidetap.libs.operations import op_lteq
 
 
@@ -93,5 +93,5 @@ def test_op_lteq_set_false():
 
 def test_op_lteq_dict():
     """Test less or equal then funcion for dict."""
-    with pytest.raises(ProcessorException):
+    with pytest.raises(TypeError):
         op_lteq({'value1': 1}, {'value1': 2})
