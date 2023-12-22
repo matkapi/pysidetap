@@ -1,5 +1,5 @@
 """Module processor.py implements the Decision table processor."""
-
+from typing import List
 
 try:
     import pysidetap.libs.operations as operations
@@ -10,7 +10,7 @@ except ModuleNotFoundError:
 class DTProcessor:
     """DTProcessor Decision table processor class."""
 
-    _d_table: list[dict]
+    _d_table: List[dict]
     _op: dict = {
         '==': operations.op_eq,
         '!=': operations.op_noteq,
@@ -18,18 +18,18 @@ class DTProcessor:
         '>=': operations.op_gteq,
         '<': operations.op_lt,
         '<=': operations.op_lteq,
-        }
+    }
 
-    def __init__(self, table: list[dict] = None) -> None:
+    def __init__(self, table: List[dict] = None) -> None:
         if table:
             self.load_table(table)
 
-    def load_table(self, table: list[dict]) -> None:
+    def load_table(self, table: List[dict]) -> None:
         """load_table Load decision table into processor.
 
         Args
         ----
-            table: list[dict], optional
+            table: List[dict], optional
                 table of fields (operation and values) and return.
 
         Example
@@ -62,7 +62,7 @@ class DTProcessor:
         ----
             values : dict
                 Dict of fields that will be evaluated
-        
+
         Example
         -------
             {'field1': 2}
@@ -80,9 +80,8 @@ class DTProcessor:
                     # for each field evaluate operation.
                     # on left side is value on right side is table value
                     res = self._op[table_field['op']](
-                        values[table_field_key],
-                        table_field['value']
-                        )
+                        values[table_field_key], table_field['value']
+                    )
                     if not res:
                         all_pass &= False
             if all_pass:
