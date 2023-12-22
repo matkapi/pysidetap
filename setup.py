@@ -13,7 +13,7 @@ from setuptools import find_packages, setup
 def read(*names, **kwargs):
     """Read description files."""
     path = join(dirname(__file__), *names)
-    with open(path, encoding=kwargs.get('encoding', 'utf8')) as fh:
+    with open(path, encoding=kwargs.get("encoding", "utf8")) as fh:
         return fh.read()
 
 
@@ -29,72 +29,75 @@ def read(*names, **kwargs):
 #     re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read(join('docs', 'CHANGELOG.rst')))
 #     )
 
-long_description = '{}\n{}'.format(
-    read('README.rst'),
-    read('CHANGELOG.rst'),
-    )
+long_description = "{}\n{}".format(
+    read("README.rst"),
+    read("CHANGELOG.rst"),
+)
 
 setup(
-    name='pysidetap',
-    version='0.0.4',
-    description='A skeleton template for Python projects.',
+    name="pysidetap",
+    version="0.0.4",
+    description="A skeleton template for Python projects.",
     long_description=long_description,
-    long_description_content_type='text/x-rst',
-    license='MIT License',
-    author='Martin Kapinos',
-    author_email='matkapi19@gmail.com',
-    url='https://github.com/matkapi/pysidetap',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
+    long_description_content_type="text/x-rst",
+    license="MIT License",
+    author="Martin Kapinos",
+    author_email="matkapi19@gmail.com",
+    url="https://github.com/matkapi/pysidetap",
+    packages=find_packages("src"),
+    package_dir={"": "src"},
     py_modules=[splitext(basename(i))[0] for i in glob("src/*.py")],
     include_package_data=True,
     zip_safe=False,
     classifiers=[
         # complete classifier list:
         # http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 4 - Beta',
+        "Development Status :: 4 - Beta",
         # 'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
-        'License :: OSI Approved :: MIT License',
-        'Intended Audience :: Science/Research',
-        'Natural Language :: English',
-        'Operating System :: POSIX',
-        'Operating System :: MacOS',
-        'Operating System :: Microsoft',
-        'Programming Language :: Python :: 3.10',
-        'Topic :: Scientific/Engineering :: Bio-Informatics',
-        ],
+        "License :: OSI Approved :: MIT License",
+        "Intended Audience :: Science/Research",
+        "Natural Language :: English",
+        "Operating System :: POSIX",
+        "Operating System :: MacOS",
+        "Operating System :: Microsoft",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Scientific/Engineering :: Bio-Informatics",
+    ],
     project_urls={
-        'webpage': 'https://github.com/matkapi/pysidetap',
-        'Documentation': 'https://pysidetap.readthedocs.io/en/latest/',
-        'Changelog': 'https://github.com/matkapi/pysidetap/blob/master/CHANGELOG.rst',
-        'Issue Tracker': 'https://github.com/matkapi/pysidetap/issues',
-        'Discussion Forum': 'https://github.com/matkapi/pysidetap/discussions',
-        },
+        "webpage": "https://github.com/matkapi/pysidetap",
+        "Documentation": "https://pysidetap.readthedocs.io/en/latest/",
+        "Changelog": "https://github.com/matkapi/pysidetap/blob/master/CHANGELOG.rst",
+        "Issue Tracker": "https://github.com/matkapi/pysidetap/issues",
+        "Discussion Forum": "https://github.com/matkapi/pysidetap/discussions",
+    },
     keywords=[
-        'ci', 'continuous-integration', 'project-template',
-        'project-skeleton', 'sample-project',
+        "ci",
+        "continuous-integration",
+        "project-template",
+        "project-skeleton",
+        "sample-project",
         # eg: 'keyword1', 'keyword2', 'keyword3',
-        ],
-    python_requires='>=3.7, <4',
+    ],
+    python_requires=">=3.7, <4",
     install_requires=[
         # https://stackoverflow.com/questions/14399534
-        'matplotlib>=3',
-        ],
+        # 'matplotlib>=3',
+    ],
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],
         #   ':python_version=="2.6"': ['argparse'],
-        },
+    },
     setup_requires=[
         #   'pytest-runner',
         #   'setuptools_scm>=3.3.1',
-        ],
+    ],
     entry_points={
-        'console_scripts': [
-            'samplecli1= pysidetap.cli_int1:main',
-            ]
+        "console_scripts": [
+            "samplecli1= pysidetap.cli_int1:main",
+        ]
         #
-        },
+    },
     # cmdclass={'build_ext': optional_build_ext},
     # ext_modules=[
     #    Extension(
@@ -105,4 +108,4 @@ setup(
     #    for root, _, _ in os.walk('src')
     #    for path in glob(join(root, '*.c'))
     # ],
-    )
+)
