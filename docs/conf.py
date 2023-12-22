@@ -48,7 +48,7 @@ project = 'pysidetap'
 year = '2023'
 author = 'Martin Kapinos'
 copyright = '{0}, {1}'.format(year, author)
-version = release = '0.0.7'
+version = release = '0.0.8'
 
 pygments_style = 'trac'
 templates_path = ['.']
