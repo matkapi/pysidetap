@@ -139,7 +139,7 @@ or chat :wink:
 Version
 -------
 
-v0.0.9
+v0.0.10
 
 .. _GitHub Actions: https://github.com/features/actions
 .. _PyPI: https://pypi.org

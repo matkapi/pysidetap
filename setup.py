@@ -36,7 +36,7 @@ long_description = '{}\n{}'.format(
 
 setup(
     name='pysidetap',
-    version='0.0.9',
+    version='0.0.10',
     description='A skeleton template for Python projects.',
     long_description=long_description,
     long_description_content_type='text/x-rst',
