@@ -71,12 +71,7 @@ setup(
         'Discussion Forum': 'https://github.com/matkapi/pysidetap/discussions',
     },
     keywords=[
-        'ci',
-        'continuous-integration',
-        'project-template',
-        'project-skeleton',
-        'sample-project',
-        # eg: 'keyword1', 'keyword2', 'keyword3',
+        'decision-table',
     ],
     python_requires='>=3.7, <4',
     install_requires=[
