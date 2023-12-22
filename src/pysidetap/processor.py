@@ -1,6 +1,7 @@
 """Module processor.py implements the Decision table processor."""
 from typing import List
 
+
 try:
     import pysidetap.libs.operations as operations
 except ModuleNotFoundError:

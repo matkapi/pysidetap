@@ -1,9 +1,10 @@
 """Performs opetrations tests for less or equal then."""
 
 
-# isort: skip_file
-from pysidetap.libs.operations import op_lteq
 import pytest
+
+from pysidetap.execptions import ProcessorException
+from pysidetap.libs.operations import op_lteq
 
 
 def test_op_lteq_int_true():
@@ -92,5 +93,5 @@ def test_op_lteq_set_false():
 
 def test_op_lteq_dict():
     """Test less or equal then funcion for dict."""
-    with pytest.raises(Exception):
+    with pytest.raises(ProcessorException):
         op_lteq({'value1': 1}, {'value1': 2})

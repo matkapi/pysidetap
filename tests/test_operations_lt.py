@@ -1,8 +1,9 @@
 """Performs opetrations tests for."""
 
 
-# isort: skip_file
 import pytest
+
+from pysidetap.execptions import ProcessorException
 from pysidetap.libs.operations import op_lt
 
 
@@ -80,5 +81,5 @@ def test_op_lt_set_false():
 
 def test_op_lt_dict():
     """Test less then funcion for dict."""
-    with pytest.raises(Exception):
+    with pytest.raises(ProcessorException):
         op_lt({'value1': 1}, {'value1': 2})

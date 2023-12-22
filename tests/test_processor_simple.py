@@ -1,13 +1,8 @@
 """Performs general tests."""
 
 
-# isort: skip_file
-from asserts_simple import (
-    DTableEQ,
-    DTableGT_LTEQ,
-    DTableLT_GTEQ,
-    DTableNone
-    )
+from asserts_simple import DTableEQ, DTableGT_LTEQ, DTableLT_GTEQ, DTableNone
+
 from pysidetap.processor import DTProcessor
 
 
